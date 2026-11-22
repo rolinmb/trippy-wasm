@@ -1,1 +1,1 @@
-Remimplementing my repo psychedelic-js in wasm.W
+Remimplementing my repo psychedelic-js in wasm.
