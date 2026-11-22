@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 20px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #15151f;
+    color: #f0f0f5;
+}
+
+.app {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.app-header p {
+    margin-top: 8px;
+    color: #aaaabb;
+}
+
+
+/* Canvas */
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #55556b;
+    background: #000;
+}
+
+
+/* Two-column controls layout */
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+
+/* Panels */
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 25px;
+    background: #222230;
+    border: 1px solid #383849;
+    border-radius: 12px;
+}
+
+.panel h2 {
+    margin: 0 0 5px;
+    padding-bottom: 12px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #444455;
+}
+
+
+/* Form controls */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #ccccdd;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    border-radius: 6px;
+}
+
+input[type="text"],
+select {
+    color: #f0f0f5;
+    background: #15151f;
+    border: 1px solid #49495c;
+}
+
+input[type="range"] {
+    padding: 0;
+    accent-color: #a66cff;
+    cursor: pointer;
+}
+
+button {
+    margin-top: auto;
+    padding: 12px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.primary-button {
+    color: white;
+    background: #7850d8;
+}
+
+.secondary-button {
+    color: white;
+    background: #287caa;
+}
+
+
+/* Tablet and mobile layouts */
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+    .controls-grid {
+        grid-template-columns: 1fr;
+    }
+    .panel {
+        padding: 20px;
+    }
+    .app-header h1 {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Smaller mobile devices */
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+    }
+    .panel {
+        padding: 16px;
+        gap: 15px;
+    }
+    .app-header {
+        margin-bottom: 20px;
+    }
+    .app-header h1 {
+        font-size: 1.4rem;
+    }
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+}

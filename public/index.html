@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trippy-wasm</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="canvas-container">
+            <canvas id="canvas" width="800" height="600"></canvas>
+        </section>
+
+        <section class="controls-grid">
+
+            <!-- Generation Settings -->
+            <div class="panel generation-panel">
+
+                <h2>Generation Settings</h2>
+
+                <div class="form-group">
+                    <label for="r-expression">R-Expression:</label>
+                    <input type="text" id="r-expression">
+                </div>
+
+                <div class="form-group">
+                    <label for="g-expression">G-Expression:</label>
+                    <input type="text" id="g-expression">
+                </div>
+
+                <div class="form-group">
+                    <label for="b-expression">B-Expression:</label>
+                    <input type="text" id="b-expression">
+                </div>
+
+                <div class="form-group">
+                    <label for="a-expression">A-Expression:</label>
+                    <input type="text" id="a-expression">
+                </div>
+
+                <div class="form-group">
+                    <label for="canvas-width">
+                        Canvas Width:
+                        <span id="width-value">800</span>px
+                    </label>
+                    <input type="range" id="canvas-width" min="100" max="2000" value="800" step="10">
+                </div>
+
+                <div class="form-group">
+                    <label for="canvas-height">
+                        Canvas Height:
+                        <span id="height-value">600</span>px
+                    </label>
+                    <input type="range" id="canvas-height" min="100" max="2000" value="600" step="10">
+                </div>
+
+                <button id="generate-btn" class="primary-button">
+                    Generate Image
+                </button>
+
+            </div>
+
+            <!-- Download Settings -->
+            <div class="panel download-panel">
+
+                <h2>Download Settings</h2>
+
+                <div class="form-group">
+                    <label for="filename">Image Filename:</label>
+                    <input type="text" id="filename" value="canvas" placeholder="Enter filename">
+                </div>
+
+                <div class="form-group">
+                    <label for="image-format">Image Format:</label>
+                    <select id="image-format">
+                        <option value="image/png">PNG</option>
+                        <option value="image/jpeg">JPEG</option>
+                        <option value="image/webp">WEBP</option>
+                    </select>
+                </div>
+
+                <button id="download-btn" class="secondary-button">
+                    Download Image
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
